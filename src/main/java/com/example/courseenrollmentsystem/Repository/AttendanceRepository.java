@@ -40,10 +40,11 @@ public interface AttendanceRepository
             Long enrollmentId
     );
 
-@Repository
-public interface AttendanceRepository extends JpaRepository<Attendance,Long> {
 
-    Optional<Attendance> findByAttendanceDateAndAttendanceStatus(LocalDate date, AttendanceStatus status);
+    List<Attendance>
+    findByEnrollment_StudentSemester_Student_StudentId(
+            Long studentId
+    );
 
 
     List<Attendance>

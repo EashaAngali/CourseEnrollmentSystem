@@ -4,6 +4,7 @@ import com.example.courseenrollmentsystem.Enum.AttendanceEnum.AttendanceStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -17,14 +18,16 @@ public class Attendance {
        @Id
        @GeneratedValue(strategy = GenerationType.IDENTITY)
        private Long attendanceId;
-       @Column(nullable = false)
-       private String classSession;
+       @ManyToOne(fetch = FetchType.LAZY)
+       @JoinColumn(
+               name = "class_session_id",
+               nullable = false
+       )
+       private ClassSession classSession;
        @ManyToOne(fetch = FetchType.LAZY)
        @JoinColumn(name="enrollment_id",
                nullable = false)
        private Enrollment enrollment;
-       @OneToMany
-       private List<Course> courses;
        @Enumerated(EnumType.STRING)
        @Column(nullable = false)
        private AttendanceStatus attendanceStatus;
@@ -32,6 +35,6 @@ public class Attendance {
        @Column(nullable = false)
        private AttendanceMethod attendanceMethod;
        @Column(nullable = false)
-       private LocalDate attendanceDate;
+       private LocalDateTime attendanceDate;
 
 }

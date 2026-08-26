@@ -9,27 +9,25 @@ import lombok.*;
 @AllArgsConstructor
 public class AttendanceSummaryResponseDto {
 
+    private Long enrollmentId;
+
     private Long studentId;
-
-    private String studentNumber;
-
     private String studentName;
 
     private Long courseOfferingId;
 
     private String courseCode;
-
     private String courseName;
 
-    private Long totalClasses;
+    private long totalClasses;
 
-    private Long presentCount;
+    private long presentCount;
 
-    private Long absentCount;
+    private long absentCount;
 
-    private Long lateCount;
+    private long lateCount;
 
-    private Long excusedCount;
+    private long excusedCount;
 
-    private Double attendancePercentage;
+    private double attendancePercentage;
 }

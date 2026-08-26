@@ -100,10 +100,9 @@ public class Student {
     )
     private Program program;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(
-            name = "student_card_id",
-            nullable = false
+            name = "student_card_id"
     )
     private StudentCard studentCard;
     private LocalDate admissionDate;

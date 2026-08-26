@@ -35,7 +35,12 @@ public interface EnrollmentRepository
             Long studentId,
             EnrollmentStatus status
     );
-
+    Optional<Enrollment>
+    findByStudentSemester_Student_StudentIdAndCourseOffering_CourseOfferingIdAndStatus(
+            Long studentId,
+            Long courseOfferingId,
+            EnrollmentStatus status
+    );
     List<Enrollment>
     findByCourseOffering_CourseOfferingId(
             Long courseOfferingId

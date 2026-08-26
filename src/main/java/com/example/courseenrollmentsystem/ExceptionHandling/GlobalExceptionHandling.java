@@ -18,6 +18,7 @@ public class GlobalExceptionHandling {
             ResourceNotFoundException.class,
             InvalidResourceException.class,
             StudentCardNotFoundException.class,
+            AttendanceAlreadyMarkedException.class,
             StudentAlreadyHasActiveCardException.class,
             DublicateNotAllowedException.class,
             InvalidDateException.class})

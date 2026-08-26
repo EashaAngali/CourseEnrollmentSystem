@@ -5,6 +5,8 @@ import com.example.courseenrollmentsystem.Enum.AttendanceEnum.AttendanceStatus;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Builder
@@ -33,7 +35,7 @@ public class AttendanceResponseDto {
 
     private AttendanceStatus status;
 
-    private LocalDate markedAt;
+    private LocalDateTime markedAt;
 
     private AttendanceMethod attendanceMethod;
 }

@@ -49,6 +49,6 @@ public class Course {
     private List<ProgramCourse> programCourse;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "attendance_id", nullable = false)
+    @JoinColumn(name = "attendance_id")
     private Attendance attendance;
 }
