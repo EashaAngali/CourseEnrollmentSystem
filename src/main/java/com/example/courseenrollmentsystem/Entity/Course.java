@@ -47,4 +47,8 @@ public class Course {
     @OneToMany(mappedBy = "courses")
     @JsonIgnore
     private List<ProgramCourse> programCourse;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "attendance_id", nullable = false)
+    private Attendance attendance;
 }
