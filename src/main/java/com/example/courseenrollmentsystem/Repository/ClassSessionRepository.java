@@ -46,4 +46,19 @@ public interface ClassSessionRepository
             Long courseOfferingId,
             ClassSessionStatus status
     );
+    boolean existsByClassSchedule_ClassScheduleIdAndSessionDate(
+            Long classScheduleId,
+            LocalDate sessionDate
+    );
+
+
+    boolean existsByClassSchedule_ClassScheduleId(
+            Long classScheduleId
+    );
+
+
+    List<ClassSession>
+    findByClassSchedule_ClassScheduleId(
+            Long classScheduleId
+    );
 }

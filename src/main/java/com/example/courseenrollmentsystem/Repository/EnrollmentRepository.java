@@ -5,6 +5,7 @@ import com.example.courseenrollmentsystem.Enum.EnrollmentEnum.EnrollmentStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface EnrollmentRepository
         extends JpaRepository<Enrollment, Long> {
@@ -13,12 +14,17 @@ public interface EnrollmentRepository
             Long studentSemesterId,
             Long courseOfferingId
     );
+   Optional<Enrollment> findByStudentSemester_Student_StudentCard_QrToken(String qrToken);
 
-    List<Enrollment>
+
+
+   List<Enrollment>
     findByStudentSemester_StudentSemesterId(
             Long studentSemesterId
     );
-
+   boolean existsByStudentSemester_Student_StudentIdAndCourseOffering_CourseOfferingId(
+           Long  studentId,
+           Long courseOfferingId);
     List<Enrollment>
     findByStudentSemester_Student_StudentId(
             Long studentId

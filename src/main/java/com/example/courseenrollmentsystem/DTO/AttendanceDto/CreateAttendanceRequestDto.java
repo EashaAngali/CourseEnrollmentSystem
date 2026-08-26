@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class CreateAttendanceRequestDto {
     @NotNull(message = "ClassSessionId required")
-    private String classSessionId;
+    private Long classSessionId;
     @NotNull(message = "please Add qrToken")
     private String qrToken;
 }

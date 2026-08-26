@@ -47,4 +47,8 @@ public class ClassSession {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ClassSessionStatus status;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "class_schedule_id")
+    private ClassSchedule classSchedule;
 }
