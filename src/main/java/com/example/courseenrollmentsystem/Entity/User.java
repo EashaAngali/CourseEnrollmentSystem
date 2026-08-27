@@ -1,5 +1,14 @@
 package com.example.courseenrollmentsystem.Entity;
 
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
