@@ -19,7 +19,11 @@ public class User {
     private String Password;
     @Column(unique = true, nullable = false)
     private String Email;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private String Role;
     private boolean enabled = true;
     private boolean AccountNotBlocked = true;
+
 
 }
