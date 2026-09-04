@@ -113,4 +113,11 @@ public class Student {
     private StudentStatus status;
     @Enumerated(EnumType.STRING)
     private StudentSpringOrFallStatus  springOrFallStatus;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(
+            name = "user_id",
+            unique = true
+    )
+    private User user;
 }
