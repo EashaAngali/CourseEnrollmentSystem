@@ -13,7 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/academicSemster")
+@RequestMapping("/api/faculty/academicSemster")
 public class AcademicSemsterController {
     private final AcademicSemsterInterface academicSemsterInterface;
     @PostMapping

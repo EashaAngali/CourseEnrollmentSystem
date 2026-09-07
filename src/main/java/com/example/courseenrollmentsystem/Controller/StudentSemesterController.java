@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/student-semesters")
+@RequestMapping("/api/faculty/student-semesters")
 @RequiredArgsConstructor
 public class StudentSemesterController {
 

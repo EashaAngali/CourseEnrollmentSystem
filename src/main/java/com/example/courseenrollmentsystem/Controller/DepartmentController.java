@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/department")
+@RequestMapping("/api/faculty/department")
 public class DepartmentController {
     private final DepartmentInterface departmentInterface;
     @GetMapping

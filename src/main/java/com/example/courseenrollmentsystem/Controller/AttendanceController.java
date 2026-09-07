@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/attendance")
+@RequestMapping("/api/teacher/attendance")
 @RequiredArgsConstructor
 public class AttendanceController {
 

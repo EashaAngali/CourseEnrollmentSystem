@@ -18,7 +18,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/class-sessions")
+@RequestMapping("/api/faculty/class-sessions")
 @RequiredArgsConstructor
 public class ClassSessionController {
 

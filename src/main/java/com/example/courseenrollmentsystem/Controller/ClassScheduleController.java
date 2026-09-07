@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/class-schedules")
+@RequestMapping("/api/faculty/class-schedules")
 @RequiredArgsConstructor
 public class ClassScheduleController {
 

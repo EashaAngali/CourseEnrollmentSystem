@@ -1,6 +1,7 @@
 package com.example.courseenrollmentsystem.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -18,6 +19,7 @@ public class User {
     @Column(nullable = false)
     private String Password;
     @Column(unique = true, nullable = false)
+    @Email
     private String Email;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

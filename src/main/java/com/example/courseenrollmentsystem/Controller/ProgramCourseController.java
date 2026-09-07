@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/programCourse")
+@RequestMapping("/api/faculty/programCourse")
 public class ProgramCourseController {
     private final ProgramCourseInterface programCourseInterface;
 

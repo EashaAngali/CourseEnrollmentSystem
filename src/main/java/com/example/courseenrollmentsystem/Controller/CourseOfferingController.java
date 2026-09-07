@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/course-offerings")
+@RequestMapping("/api/faculty/course-offerings")
 @RequiredArgsConstructor
 public class CourseOfferingController {
 

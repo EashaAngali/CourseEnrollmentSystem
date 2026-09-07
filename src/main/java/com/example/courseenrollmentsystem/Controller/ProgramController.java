@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/program")
+@RequestMapping("/api/faculty/program")
 public class ProgramController {
     private final ProgramInterface programInterface;
     @GetMapping
